@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <h2>{{ page.title }}</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    {% for item in site.works %}
+      {% if item.group == page.title %}
+        <a href="{{ item.id }}/">
+          <img src="{{ item.id }}_preview.jpg" alt="{{ item.title }}" style="padding-top: 20px; padding-right: 20px; height: 150px;">
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
